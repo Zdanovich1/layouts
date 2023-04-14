@@ -1,0 +1,655 @@
+/*!Обнуление*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+/*!------------Конец обнуления-------------*/
+
+@font-face {
+   font-family: 'Gilroy';
+   src: local('Gilroy Bold'), local('Gilroy-Bold'),
+      url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+      url('/fonts/Gilroy-Bold.woff') format('woff'),
+      url('/fonts/Gilroy-Bold.ttf') format('truetype');
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Gilroy';
+   src: local('Gilroy Medium'), local('Gilroy-Medium'),
+      url('/fonts/Gilroy-Medium.woff2') format('woff2'),
+      url('/fonts/Gilroy-Medium.woff') format('woff'),
+      url('/fonts/Gilroy-Medium.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+* {
+   font-family: Gilroy, sans-serif;
+}
+
+.wrapper {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+.main {
+   flex: 1 1 auto;
+}
+
+[class*="__container"] {
+   max-width: 945px;
+   margin: 0px auto;
+}
+
+/**-------Переменные-------*/
+:root {
+   --main-text-color: #070707;
+   --disabled-link-color: #828282;
+}
+
+.main-info-font {
+   font-size: 1.29em;
+   font-weight: 500;
+   line-height: 1.56rem;
+   color: var(--main-text-color);
+}
+
+/**header*/
+
+.header__menu {
+   height: 89px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #828282;
+}
+
+.header__icon {
+   display: none;
+}
+
+.menu__item {
+   margin-bottom: 5px;
+}
+
+.menu__link {
+   font-size: 1.25em;
+   line-height: 1.6rem;
+   font-weight: 700;
+   color: var(--disabled-link-color);
+}
+
+.menu__link_active {
+   color: var(--main-text-color);
+}
+
+/**home*/
+
+.home__container {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 104px;
+}
+
+.home__info {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   margin-top: 30px;
+   margin-bottom: 45px;
+}
+
+.home__title {
+   font-size: 3.38em;
+   line-height: 4.06rem;
+   font-weight: 700;
+   color: var(--main-text-color);
+}
+
+.home__subtitle {
+   margin-bottom: 10px;
+   margin-left: -8px;
+}
+
+.home__lang-btns {
+   transform: rotate(-90deg);
+}
+
+.lang-btn,
+.home__lang-btns span {
+   font-size: 1.15em;
+   line-height: 1.43rem;
+   font-weight: 700;
+   color: var(--disabled-link-color);
+   text-transform: uppercase;
+   background-color: transparent;
+   position: relative;
+   top: 21px;
+   left: 32px;
+}
+
+.lang-btn_active,
+.home__lang-btns span {
+   color: var(--main-text-color);
+}
+
+.home__img {
+   width: 100%;
+   height: 387px;
+   background-image: url(assets/main-photo.jpg);
+   background-position: 50% 44%;
+}
+
+/**about*/
+
+.about,
+.portfolio {
+   background-color: #F6F6F6;
+}
+
+.about__container {
+   height: 506px;
+   text-align: center;
+}
+
+.title {
+   font-size: 2.43em;
+   line-height: 3rem;
+   letter-spacing: 0em;
+   font-weight: 700;
+   color: var(--main-text-color);
+   text-align: center;
+}
+
+.about__title {
+   padding-top: 112px;
+   margin-bottom: 23px;
+}
+
+#about__info__second-paragraph {
+   margin-top: 44px;
+   margin-bottom: 44px;
+}
+
+/**skills*/
+
+.skills__title {
+   margin-top: 83px;
+}
+
+.skills__info {
+   text-align: center;
+   margin-top: 58px;
+   margin-bottom: 87px;
+}
+
+.skills__programs {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 4px;
+   margin-bottom: 110px;
+}
+
+.programs__item {
+   width: 166px;
+   height: 207px;
+   padding: 0px 2px 4px 2px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.programs__name {
+   font-size: 1em;
+   line-height: 1.24rem;
+   font-weight: 700;
+   color: var(--disabled-link-color);
+   text-align: center;
+}
+
+.programs__img {
+   margin-bottom: 22px;
+}
+
+.programs__level {
+   display: flex;
+   gap: 13px;
+   flex-grow: 1;
+   align-items: flex-end;
+}
+
+.grey {
+   opacity: 0.1;
+}
+
+/**portfolio*/
+
+.portfolio {
+   padding-bottom: 100px;
+}
+
+.portfolio__container {
+   padding: 0px 5px;
+}
+
+.portfolio__title {
+   padding-top: 107px;
+   margin-bottom: 55px;
+   margin-left: 4px;
+}
+
+.item__img img {
+   width: 100%;
+}
+
+.item__link {
+   text-align: center;
+   text-decoration: underline;
+   margin: 43px 0 100px 10px;
+}
+
+#reebok-store-link {
+   margin-top: 45px;
+   margin-bottom: 104px;
+}
+
+#broun-link {
+   margin-bottom: 0px;
+}
+
+/**contacts*/
+
+.contacts__container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.contacts__title {
+   margin-top: 108px;
+   margin-bottom: 24px;
+}
+
+.contacts__question {
+   text-align: center;
+   margin-bottom: 35px;
+   margin-left: 10px;
+}
+
+.contacts__button {
+   margin-bottom: 86px;
+}
+
+.contacts__button button {
+   width: 181px;
+   height: 42px;
+   background-color: #070707;
+   border-radius: 21px;
+   font-size: 1.29em;
+   font-weight: 500;
+   line-height: 1.56rem;
+   color: #FFFFFF;
+}
+
+.contacts__socials {
+   display: flex;
+   gap: 60px;
+   margin-bottom: 44px;
+}
+
+.contacts__link-description {
+   text-align: center;
+   color: var(--disabled-link-color);
+   margin-bottom: 120px;
+   margin-left: 5px;
+}
+
+
+@media (max-width: 700px) {
+
+   /**skills*/
+
+   .skills__programs {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px;
+      margin-bottom: 100px;
+   }
+
+}
+
+@media (max-width: 375px) {
+
+   [class*="__container"] {
+      max-width: 316px;
+      margin: 0px auto;
+   }
+
+   ._lock {
+      overflow: hidden;
+   }
+
+   /**header*/
+
+   .header__nav,
+   .header__container {
+      position: relative;
+   }
+
+   .header__container {
+      margin-top: 57px;
+   }
+
+   .header__menu {
+      position: fixed;
+      left: 100%;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 50px;
+      align-items: flex-start;
+      padding-left: 26px;
+      padding-top: 65px;
+      transition: .5s;
+   }
+
+   ._active {
+      left: 0%;
+   }
+
+   .menu__item {
+      margin-bottom: 0px;
+   }
+
+   .menu__link {
+      font-size: 2.42em;
+      line-height: 3rem;
+   }
+
+   /**------Бургер-иконка-------*/
+
+   .header__icon {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      height: 20px;
+      width: 33px;
+      cursor: pointer;
+   }
+
+   .header__icon span,
+   .header__icon::before,
+   .header__icon::after {
+      content: " ";
+      left: 0;
+      position: absolute;
+      height: 20%;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: #000000;
+   }
+
+   .header__icon::before {
+      top: 0;
+   }
+
+   .header__icon::after {
+      bottom: 0;
+   }
+
+   .header__icon span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+   }
+
+   .header__icon._open::after,
+   .header__icon._open::before {
+      top: 50%;
+      background-color: var(--disabled-link-color);
+   }
+
+   .header__icon._open span {
+      display: none;
+   }
+
+   .header__icon._open::after {
+      transform: rotate(45deg);
+   }
+
+   .header__icon._open::before {
+      transform: rotate(-45deg);
+   }
+
+   /**home*/
+
+   .home__container {
+      margin-bottom: 84px;
+   }
+
+   .home__info {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0px;
+      margin-bottom: 41px;
+   }
+
+   .home__title {
+      margin-left: -5px;
+   }
+
+   .home__subtitle {
+      margin-top: 20px;
+      margin-left: -2px;
+      margin-bottom: 0px;
+   }
+
+   .home__lang-btns {
+      display: none;
+   }
+
+   ._menu-mod {
+      display: block;
+      transform: rotate(90deg);
+      position: absolute;
+      bottom: 155px;
+      right: -20px;
+   }
+
+   .lang-btn,
+   .home__lang-btns span {
+      font-size: 2.42em;
+      line-height: 3rem;
+      position: relative;
+      top: 0;
+      left: 0;
+   }
+
+   .home__img {
+      height: 478px;
+      background-size: 144%;
+      background-position: 50% 96%;
+   }
+
+   /**about*/
+
+   .about__container {
+      height: 491px;
+   }
+
+   .about__info br {
+      display: none;
+   }
+
+   .about__title {
+      padding-top: 73px;
+      margin-bottom: 33px;
+   }
+
+   /**skills*/
+
+   .skills__title {
+      margin-top: 75px;
+   }
+
+   .skills__info {
+      margin-top: 38px;
+      margin-bottom: 75px;
+   }
+
+   /**portfolio*/
+
+   .portfolio {
+      padding-bottom: 100px;
+   }
+
+   .portfolio__container {
+      padding: 0px 5px;
+   }
+
+   .portfolio__title {
+      padding-top: 75px;
+      margin-bottom: 72px;
+      margin-left: 0px;
+   }
+
+   .item__link {
+      margin: 35px 0 80px 0px;
+   }
+
+   #reebok-store-link {
+      margin-top: 40px;
+      margin-bottom: 84px;
+   }
+
+   /**contacts*/
+
+   .contacts__title {
+      margin-top: 58px;
+      margin-bottom: 30px;
+   }
+
+   .contacts__question {
+      margin-bottom: 43px;
+      margin-left: 0px;
+   }
+
+   .contacts__button {
+      width: 100%;
+      margin-bottom: 50px;
+   }
+
+   .contacts__button button {
+      width: 100%;
+   }
+
+   .contacts__socials {
+      gap: 52px;
+      margin-bottom: 44px;
+   }
+
+   .contacts__link-description {
+      font-size: 1.29em;
+      line-height: 1.56rem;
+      margin-left: 0px;
+   }
+
+}
